@@ -6,6 +6,14 @@ name = "pypi"
 [packages]
 requests = "*"
 pandas = "*"
+streamlit = "*"
+numpy = "*"
+comet-ml = "*"
+scikit-learn = "*"
+catboost = "*"
+seaborn = "*"
+matplotlib = "*"
+metaflow = "*"
 
 [dev-packages]
 
