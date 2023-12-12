@@ -9,7 +9,7 @@
 (1) Dataset
 * This problem is suitable to be solve through machine learning model because it has training data which are all numerical, and then it can get a prediction by applying regression model.
 * This dataset is provided from an investiment company called Optiver from Kaggle. So the dataset is large enough and trustworthy.\
-\
+
 (2) EDA
 * We explored the dataset and added more features according to the financial model.
 * The impalanced feature between prices are more promising for our model. Because the prediction is mostly relied on the imbalanced data. \
