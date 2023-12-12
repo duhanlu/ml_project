@@ -6,7 +6,7 @@ The goal of this project is to develop a model capable of predicting the closing
 
 # Guidance
 * Notebook for data analysis and data visualization: there is notebook called eda.ipynb. There are graphs and heatmap of data visualization.
-* Run comment: "python ml_project_metaflow.py run" to train and test model in metaflow. From the console, you could see the MAE of the test data.
+* Run comment: "python ml_project_metaflow.py run" to train and test model in metaflow. From the console, you could see the MAE of the test data. There is a step in this flow which will be uploaded to the commet. You can see the dashboard screenshot named"commet_dashboard_screenshot.png"
 * Run comment: "streamlit run deploy.py" to show the user interface. It can shows the top 5 stock and bottom 5 stock by selecting a date. And it can show a stock price change by entering the stock id. You could play around here by adding values to get prediction or uploading files for prediction. But The uploaed file has to be have a right format.
 * 
 # Checklist
