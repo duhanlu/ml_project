@@ -1,1 +1,30 @@
+name: Generate requirements.txt
+
+on: [push]
+
+jobs:
+  generate-requirements:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.8'
+
+    - name: Install pipreqs
+      run: pip install pipreqs
+
+    - name: Generate requirements.txt
+      run: pipreqs ./ --force
+
+    - name: Commit requirements.txt
+      run: |
+        git config --global user.name 'Siyu Zheng'
+        git config --global user.email 'sz4485@nyu.edu'
+        git add -A
+        git commit -m "Update requirements.txt" || echo "No changes to commit"
+        git push
 
