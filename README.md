@@ -16,7 +16,7 @@ The goal of this project is to develop a model capable of predicting the closing
 
 (2) EDA
 * We explored the dataset and added more features according to the financial model.
-* The impalanced feature between prices are more promising for our model. Because the prediction is mostly relied on the imbalanced data. 
+* Our model is doing prediction, data imbalance and augmentation do not apply.
 
 (3) Data preparation
 * We preprocessed data to remove the Nah and infinite data in the dataset.
