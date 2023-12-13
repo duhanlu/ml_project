@@ -8,7 +8,7 @@ The goal of this project is to develop a model capable of predicting the closing
 * Notebook for data analysis and data visualization: there is notebook called eda.ipynb. There are graphs and heatmap of data visualization.
 * Run comment: "python ml_project_metaflow.py run" to train and test model in metaflow. From the console, you could see the MAE of the test data. There is a step in this flow which will upload the results to commet. You can see the dashboard screenshot named"commet_dashboard_screenshot.png"
 * Run comment: "streamlit run deploy.py" to show the user interface. It can shows the top 5 stock and bottom 5 stock by selecting a date. And it can show a stock price change by entering the stock id. You could play around here by adding values to get prediction or uploading files for prediction. But The uploaed file has to be have a right format.
-* 
+* There is a cloud deplay for our project with Streamlit, you could visit url: https://ml7773projectdeploy.streamlit.app/ for the cloud demonstration of it.
 # Checklist
 (1) Dataset
 * This problem is suitable to be solve through machine learning model because it has training data which are all numerical, and then it can get a prediction by applying regression model.
@@ -41,3 +41,4 @@ The goal of this project is to develop a model capable of predicting the closing
 * We built a user interface by streamlit to show the graph of predictions. Also, user can make prediction by adding values or uploading csv files.
 
 (9) Environment
+* We've created the .lock file for user to update the computer environment to run our project. 
