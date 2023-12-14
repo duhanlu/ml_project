@@ -1,1 +1,0 @@
-[MFLOG|0|2023-11-08T16:40:53.001019Z|runtime|445086b3-2587-425c-b55e-3b24c02af22c]Input features: ['Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Fare', 'Cabin', 'Embarked', 'Ticket_number', 'Ticket_item']
