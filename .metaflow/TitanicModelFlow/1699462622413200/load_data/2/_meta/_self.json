@@ -1,0 +1,1 @@
+{"run_number": "1699462622413200", "step_name": "load_data", "task_id": "2", "flow_id": "TitanicModelFlow", "user_name": "fionasy", "tags": [], "system_tags": ["user:fionasy", "runtime:dev", "python_version:3.11.4", "metaflow_version:2.10.6"], "ts_epoch": 1699462625665}

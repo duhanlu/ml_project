@@ -1,0 +1,40 @@
+[MFLOG|0|2023-11-22T16:25:08.160375Z|runtime|0556757d-2fa6-4312-b203-02496701bb30]<flow P2 step start> failed:
+[MFLOG|0|2023-11-22T16:25:08.162659Z|runtime|b17c2024-23a6-4322-bd3b-73cdba104968]    Internal error
+[MFLOG|0|2023-11-22T16:25:08.163384Z|runtime|ba6028c6-093c-4cf7-9083-02b7b606bf49]Traceback (most recent call last):
+[MFLOG|0|2023-11-22T16:25:08.163427Z|runtime|bd07c41d-fd79-4547-a5ec-a53402672773]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/cli.py", line 1175, in main
+[MFLOG|0|2023-11-22T16:25:08.163466Z|runtime|d505c141-4d0f-42f6-b4a9-1e3914e94ccb]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2023-11-22T16:25:08.163521Z|runtime|9b47c95f-f665-408a-a432-257bbdb9a754]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/tracing/__init__.py", line 27, in wrapper_func
+[MFLOG|0|2023-11-22T16:25:08.163547Z|runtime|2c5d5e82-d480-4bf4-bb9b-82eddc3ba33c]    return func(args, kwargs)
+[MFLOG|0|2023-11-22T16:25:08.187554Z|runtime|70135673-8245-4551-aa2a-630b2c196634]           ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-22T16:25:08.187684Z|runtime|d14115d4-b464-497d-b7c8-cac711c064e8]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2023-11-22T16:25:08.187719Z|runtime|4d240e2f-e547-44ee-bafc-59bda1ac133d]    return self.main(args, kwargs)
+[MFLOG|0|2023-11-22T16:25:08.187744Z|runtime|421a67e9-85f8-40e0-a7d8-176455c2b012]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-22T16:25:08.187771Z|runtime|8a72ccb2-bda8-45f7-9cc9-589b41421fa7]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2023-11-22T16:25:08.187793Z|runtime|7ba0d0c9-3477-40f9-a0d6-a0edf69ab95c]    rv = self.invoke(ctx)
+[MFLOG|0|2023-11-22T16:25:08.187817Z|runtime|f1c8ab0e-fca1-430d-9399-44836cf8a5f4]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-22T16:25:08.187836Z|runtime|d83100e0-a51f-4f3a-8693-38a764387f41]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 1259, in invoke
+[MFLOG|0|2023-11-22T16:25:08.187852Z|runtime|5db8a0ec-60cd-4bad-abfd-60d705010142]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2023-11-22T16:25:08.187872Z|runtime|394b8d63-ee1f-4ef3-b444-4b8fd207e044]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-22T16:25:08.187899Z|runtime|8eeffb33-e4fa-426d-b77b-48bbf6be4149]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2023-11-22T16:25:08.187923Z|runtime|942e1ac4-24ad-4828-a9bd-7075600a813d]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2023-11-22T16:25:08.187945Z|runtime|364211bc-feb1-465e-9750-3808ab1daa88]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-22T16:25:08.187964Z|runtime|1752cde7-4bf5-4b76-88d7-03d69fe38247]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2023-11-22T16:25:08.187985Z|runtime|ab105b55-d4e8-443a-bf7d-4ed96b380f83]    return callback(args, kwargs)
+[MFLOG|0|2023-11-22T16:25:08.188013Z|runtime|fda6af30-2811-4e31-b598-fd0043313f44]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-22T16:25:08.188035Z|runtime|d3cf71cd-d769-404d-9195-e5b1c27c7bbf]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2023-11-22T16:25:08.188055Z|runtime|45be0d6a-06ee-4c1e-bcd9-d27ddaeee804]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2023-11-22T16:25:08.188077Z|runtime|71f032f0-4b9d-4ba2-956c-43f8c456e7d4]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-22T16:25:08.188098Z|runtime|79a19791-5622-461b-b7c0-420f2c8d6ffb]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/cli.py", line 582, in step
+[MFLOG|0|2023-11-22T16:25:08.188119Z|runtime|36f49cfa-8547-4834-b96e-9779549d8672]    task.run_step(
+[MFLOG|0|2023-11-22T16:25:08.188139Z|runtime|dfdeb8f4-6c4e-46d4-a6d0-03732558c291]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/task.py", line 596, in run_step
+[MFLOG|0|2023-11-22T16:25:08.188159Z|runtime|77c7e424-5ca2-4cd8-b784-14dfd6c4a2f1]    self._exec_step_function(step_func)
+[MFLOG|0|2023-11-22T16:25:08.188176Z|runtime|c6377522-1112-4af0-a21c-cc4d7ef77281]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/task.py", line 57, in _exec_step_function
+[MFLOG|0|2023-11-22T16:25:08.188196Z|runtime|f2ebece0-4306-4162-a373-a0d1ef27056c]    step_function()
+[MFLOG|0|2023-11-22T16:25:08.188217Z|runtime|d5ee83f3-bd23-4860-8cab-afe31eabc647]  File "/Users/fionasy/Desktop/VSCODE/P2.py", line 9, in start
+[MFLOG|0|2023-11-22T16:25:08.188236Z|runtime|1b37aaaf-78ca-4188-8cca-c2c5df8e4ada]    self.process_training_file('big.txt')
+[MFLOG|0|2023-11-22T16:25:08.188252Z|runtime|345aefdd-1fca-480b-914d-701b548fe72c]  File "/Users/fionasy/Desktop/VSCODE/P2.py", line 16, in process_training_file
+[MFLOG|0|2023-11-22T16:25:08.188272Z|runtime|304cd570-27c3-42f2-b10a-7815eb7797c7]    self.WORDS = Counter(words(open(file_path).read()))
+[MFLOG|0|2023-11-22T16:25:08.188292Z|runtime|d676c364-48e3-4ca2-8e07-147777b4bd7b]                               ^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-22T16:25:08.188311Z|runtime|8145c59c-8912-4734-b3e8-e10f39bea0a7]FileNotFoundError: [Errno 2] No such file or directory: 'big.txt'
+[MFLOG|0|2023-11-22T16:25:08.188334Z|runtime|7898ef82-e71e-435b-bc7b-f660064a2e19]
+[MFLOG|0|2023-11-22T16:25:08.188672Z|runtime|165cdf66-7a6c-48e6-aa54-ea31e8d1485e]Task failed.

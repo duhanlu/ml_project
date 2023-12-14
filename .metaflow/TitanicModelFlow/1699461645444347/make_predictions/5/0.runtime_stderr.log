@@ -1,0 +1,3 @@
+[MFLOG|0|2023-11-08T16:40:59.824001Z|runtime|ef8d9795-698f-4b56-8289-2f8508bd9fe5][INFO 23-11-09 00:40:59.8233 CST kernel.cc:1233] Loading model from path model/assets/ with prefix eaf5301484d2496b
+[MFLOG|0|2023-11-08T16:40:59.825477Z|runtime|54732b20-ed86-45bb-99ca-0d78a1065936][INFO 23-11-09 00:40:59.8254 CST abstract_model.cc:1344] Engine "GradientBoostedTreesQuickScorerExtended" built
+[MFLOG|0|2023-11-08T16:40:59.825562Z|runtime|f4e49d5a-473f-48a0-ab5a-b6f59537fc0c][INFO 23-11-09 00:40:59.8254 CST kernel.cc:1061] Use fast generic engine

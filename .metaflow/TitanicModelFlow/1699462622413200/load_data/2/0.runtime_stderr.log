@@ -1,0 +1,40 @@
+[MFLOG|0|2023-11-08T16:57:07.911966Z|runtime|1a613cc4-a3cc-49f9-a05e-d8c291b94243]<flow TitanicModelFlow step load_data> failed:
+[MFLOG|0|2023-11-08T16:57:07.916760Z|runtime|fb6b9731-1da1-425e-a91d-40888d36733b]    Internal error
+[MFLOG|0|2023-11-08T16:57:07.918835Z|runtime|adb69909-2216-4e57-a7b2-adb76bb703a4]Traceback (most recent call last):
+[MFLOG|0|2023-11-08T16:57:07.919045Z|runtime|517a2489-d92e-4dc2-9154-7ae4028fafe2]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/cli.py", line 1175, in main
+[MFLOG|0|2023-11-08T16:57:07.919135Z|runtime|fe13cb4f-d12b-4870-83b9-1d0348883c62]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2023-11-08T16:57:07.919181Z|runtime|1ba8091c-9f9b-467c-b2f8-0e9ffb9076b9]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/tracing/__init__.py", line 27, in wrapper_func
+[MFLOG|0|2023-11-08T16:57:07.919221Z|runtime|2ffbdc70-05c6-49e3-9b72-451bd6f7934d]    return func(args, kwargs)
+[MFLOG|0|2023-11-08T16:57:08.256325Z|runtime|2235b237-0d7c-46e2-8d6a-48769c485a9d]           ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-08T16:57:08.256644Z|runtime|6f5ce057-e690-49b4-ae1d-9f3da69527ed]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2023-11-08T16:57:08.256708Z|runtime|b8e1118c-caac-444e-9f51-500a4a7a9a30]    return self.main(args, kwargs)
+[MFLOG|0|2023-11-08T16:57:08.256735Z|runtime|aa4217bf-2a0b-4a7e-b815-befa7d4cbdde]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-08T16:57:08.256755Z|runtime|130093f1-aa69-49fc-938a-1bcd369bdac3]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2023-11-08T16:57:08.256772Z|runtime|48b786d2-283e-4753-b5b0-74ca9b8a56be]    rv = self.invoke(ctx)
+[MFLOG|0|2023-11-08T16:57:08.256795Z|runtime|a8f059e4-ebce-48d7-913b-4bc6e23439f8]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-08T16:57:08.256813Z|runtime|1449a7dc-a4bc-4a14-9ed0-fd49bcedc711]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 1259, in invoke
+[MFLOG|0|2023-11-08T16:57:08.256829Z|runtime|9dc15088-c01c-4103-8ee6-d500e2b57314]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2023-11-08T16:57:08.256846Z|runtime|9c2c75f2-f823-4330-ba39-b366014cb9d8]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-08T16:57:08.256862Z|runtime|03e96125-305a-4d50-b490-55115df2b1f0]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2023-11-08T16:57:08.256877Z|runtime|541b1c05-9a27-4930-b7d9-31430b405a0a]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2023-11-08T16:57:08.256893Z|runtime|fe8f13ec-b6f8-448a-b974-e657a375f45f]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-08T16:57:08.256908Z|runtime|82992874-224f-429d-b076-580a1e45d522]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2023-11-08T16:57:08.256923Z|runtime|9684477b-23a5-45eb-817d-e385d2fd7274]    return callback(args, kwargs)
+[MFLOG|0|2023-11-08T16:57:08.256939Z|runtime|868d6142-2b36-42f3-b8c2-0dc7bd5b7b6d]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-08T16:57:08.256953Z|runtime|88f71e20-c517-4b67-84d1-b3e84a9c06c9]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2023-11-08T16:57:08.256968Z|runtime|58cb1afa-7b5b-4143-8d10-0d38047c988d]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2023-11-08T16:57:08.256984Z|runtime|35170091-8eb3-450a-a223-93e324676745]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2023-11-08T16:57:08.256998Z|runtime|392d86a2-8260-4f7a-8e6c-569b16648ff7]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/cli.py", line 582, in step
+[MFLOG|0|2023-11-08T16:57:08.257014Z|runtime|0faa399a-1b6f-4f8a-b2de-654bb5196dcd]    task.run_step(
+[MFLOG|0|2023-11-08T16:57:08.257036Z|runtime|081d1685-6f12-4bcf-a727-96a26e650ae1]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/task.py", line 596, in run_step
+[MFLOG|0|2023-11-08T16:57:08.257056Z|runtime|e40c1be1-b228-430a-945b-861cfc6be407]    self._exec_step_function(step_func)
+[MFLOG|0|2023-11-08T16:57:08.257072Z|runtime|efb28d64-0532-40b3-9303-3962deb9c3cf]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/task.py", line 57, in _exec_step_function
+[MFLOG|0|2023-11-08T16:57:08.257086Z|runtime|f05f47a9-925b-45be-a278-9b6cc6428e93]    step_function()
+[MFLOG|0|2023-11-08T16:57:08.257102Z|runtime|77253544-c7e9-4da0-b562-0595d6e22ea4]  File "/Users/fionasy/Desktop/VSCODE/TitanicModelFlow.py", line 49, in load_data
+[MFLOG|0|2023-11-08T16:57:08.257117Z|runtime|d17632a0-bbb1-4824-b466-df2d6c9c5c96]    print("Total {} rows in testing data.".format(len(self.test_df)))
+[MFLOG|0|2023-11-08T16:57:08.257132Z|runtime|02f96a43-26f8-49de-b7c8-ae4c76f7398e]                                                      ^^^^^^^^^^^^
+[MFLOG|0|2023-11-08T16:57:08.257147Z|runtime|fc82e1e6-a541-463a-9331-b90a4a3ef924]  File "/Users/fionasy/anaconda3/lib/python3.11/site-packages/metaflow/flowspec.py", line 229, in __getattr__
+[MFLOG|0|2023-11-08T16:57:08.257162Z|runtime|14438fee-a025-4cdd-a58f-f765c6db34a0]    raise AttributeError("Flow %s has no attribute '%s'" % (self.name, name))
+[MFLOG|0|2023-11-08T16:57:08.257177Z|runtime|0a811baf-1152-4f55-ae44-4c97a842edf9]AttributeError: Flow TitanicModelFlow has no attribute 'test_df'
+[MFLOG|0|2023-11-08T16:57:08.257192Z|runtime|240b68e1-2d22-4bde-b8fb-7f62bcfc3c9f]
+[MFLOG|0|2023-11-08T16:57:08.257806Z|runtime|e4fa62f8-4f5f-4321-8298-900719c25529]Task failed.
