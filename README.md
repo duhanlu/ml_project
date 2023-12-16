@@ -5,7 +5,7 @@ Stock exchanges are fast-paced, high-stakes environments where every second coun
 The goal of this project is to develop a model capable of predicting the closing price movements for hundreds of Nasdaq listed stocks using data from the order book and the closing auction of the stock. Information from the auction can be used to adjust prices, assess supply and demand dynamics, and identify trading opportunities.
 
 # Guidance
-* **EDA and visualization**:  <mark>eda.ipynb<mark> detailedly analyze three .csv files we used for our project. There are also graphs and heatmap of data visualization.
+* **EDA and visualization**:  <ins>eda.ipynb</ins> detailedly analyze three .csv files we used for our project. There are also graphs and heatmap of data visualization.
 * **Metaflow and Comet**: `python ml_project_metaflow.py` run to train and test model in metaflow. From the console, you could see the MAE of the test data. There is a step in this flow which will upload the results to commet. You can see the dashboard screenshot named *commet_dashboard_screenshot.png*.
 * **Streamlit**: `streamlit run deploy.py` to show the user interface. It can shows the top 5 stock and bottom 5 stock by selecting a date. And it can show a stock price change by entering the stock id. You could play around here by adding values to get prediction or uploading files for prediction. But The uploaed file has to be have a right format.
 * **Demo**: There is a cloud deplay for our project with Streamlit, you could visit url: https://ml7773projectdeploy.streamlit.app/ for the cloud demonstration of it.
