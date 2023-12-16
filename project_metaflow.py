@@ -31,19 +31,19 @@ class OptiverFlow(FlowSpec):
     train_file = IncludeFile(
         'df_train',
         help = 'CSV file with the training dataset',
-        default = 'train.csv'
+        default = '/CSV/train.csv'
     )
 
     test_x_file = IncludeFile(
         'test_x_df',
         help = 'CSV file with the test dataset',
-        default = 'test.csv'
+        default = '/CSV/test.csv'
     )
 
     test_y_file = IncludeFile(
         'test_y_df',
         help = 'CSV file with the revealed target dataset',
-        default = 'revealed_targets.csv'
+        default = '/CSV/revealed_targets.csv'
     )
     assertion_data = IncludeFile(
         'assertion_data_df',
@@ -445,12 +445,12 @@ class OptiverFlow(FlowSpec):
             print("Test MAE:", test_mae)
             print("Test Predictions:", test_predictions)
 
-            return model, test_predictions, best_params
+            return model, test_predictions, best_params, test_mae
 
 
         ## _1 dataset 
         self.best_params = {'depth': 3, 'iterations': 30, 'l2_leaf_reg': 1, 'learning_rate': 0.1}
-        self.model, self.test_predictions, self.best_params =  GSC(
+        self.model, self.test_predictions, self.best_params, self.test_mae =  GSC(
                     self.X_train, self.Y_train, 
                     self.X_test, self.y_test, 
                     flag=0, 
@@ -459,7 +459,7 @@ class OptiverFlow(FlowSpec):
         
         ##_0 dataset
         self.best_params_0 = {'depth': 3, 'iterations': 30, 'l2_leaf_reg': 1, 'learning_rate': 0.1}
-        self.model_0, self.test_predictions_0, self.best_params_0 =  GSC(
+        self.model_0, self.test_predictions_0, self.best_params_0,self.test_mae_0 =  GSC(
             self.X_train_0, self.Y_train_0, 
             self.X_test_0, self.y_test_0, 
             flag=0, 
@@ -478,9 +478,50 @@ class OptiverFlow(FlowSpec):
             return "Qualitative test've printed"
         print(qualitative_test())
         # Proceed to the next step
-        self.next(self.end)
+        self.next(self.upload_to_comet)
     
 
+    @step
+    def upload_to_comet(self):
+        self.combined_test_predictions = np.concatenate([self.test_predictions, self.test_predictions_0])
+        self.combined_y_test = np.concatenate([self.y_test, self.y_test_0])
+        self.combined_test_mae = np.mean(np.abs(self.combined_test_predictions - self.combined_y_test))
+        print('test mae: {:.4f}'.format(self.test_mae))
+
+        def upload_to_comet(test_predictions_0, test_predictions, test_mae):
+            try:
+                # Create an experiment with your api key
+                experiment = Experiment(
+                    api_key="ctExkjTwIJfnErIdvtYxaNJ0q",
+                    project_name="sz4485nyu-comet-test",
+                    workspace="nyu-fre-7773-2021",
+                )
+
+                # Log the combined MAE with a descriptive context
+                experiment.log_metric("mae_combined", self.combined_test_mae)
+                experiment.log_metric('mae_for_first_5min', self.test_mae_0)
+                experiment.log_metric('mae_for_last_5min', self.test_mae)
+
+                # Add tags, parameters, and other relevant information
+                experiment.add_tags(["Data Splitting", "MAE Comparison"])
+                experiment.log_parameters({
+                    "data_splitting_method": "01 scenario data splitting",
+                    "model_name": "catboost",
+                    "evaluation_metric": "MAE",
+                })
+
+                # End the Comet.ml experiment
+                experiment.end()
+                print("MAE values uploaded to comet successfully!")
+
+            except Exception as e:
+                print(f"Failed to upload to comet: {e}")
+        
+
+        # Upload the MAE values to Comet.ml
+        upload_to_comet(self.test_predictions_0, self.test_predictions, self.test_mae)
+
+        self.next(self.end)
 
     @step
     def end(self):
