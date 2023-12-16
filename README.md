@@ -15,7 +15,8 @@ The goal of this project is to **develop a model capable of predicting the closi
   * 2️⃣ stock price change graph by entering the stock id;
   * 3️⃣ adding values to get prediction for the specific stock, date and second;
   * 4️⃣uploading files for prediction（📒 the uploaed file has to be have a right format).
-* **Demo**: Visit url: https://ml7773projectdeploy.streamlit.app/ for the cloud demonstration of it. Or you can run the deploy.py file to check the demo. 
+* **Demo**: Visit url: https://ml7773projectdeploy.streamlit.app/ for the cloud demonstration of it. Or you can run the deploy.py file to check the demo.
+* **Slides**：Find in *<ins>presentation_slides.pdf</ins>*.
 
 # Checklist
 (1) Dataset
