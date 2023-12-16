@@ -5,7 +5,7 @@ Stock exchanges are fast-paced, high-stakes environments where every second coun
 The goal of this project is to develop a model capable of predicting the closing price movements for hundreds of Nasdaq listed stocks using data from the order book and the closing auction of the stock. Information from the auction can be used to adjust prices, assess supply and demand dynamics, and identify trading opportunities.
 
 # Guidance
-* **Data**: Three data files for our projects: *<ins>train.csv*</ins>, *<ins>test.csv*</ins>, *<ins>revealed_targets.csv*</ins>. The train.csv is too large that you can see the file in this google dirve link: 
+* **Data**: Three data files for our projects: *<ins>train.csv*</ins>, *<ins>test.csv*</ins>, *<ins>revealed_targets.csv*</ins>. （📒 The train.csv is too large that you can see the file in this google dirve link: ）
 * **EDA**:  *<ins>eda.ipynb</ins>* detailedly analyze three .csv files we used for our project. There are also graphs and heatmap of data visualization.
 * **Metaflow and Comet**:
   * Find in *<ins>ml_project_metaflow.py</ins>*. `python ml_project_metaflow.py run` to train the test model and predict in metaflow. From the console, you could see the MAE of the test data.
@@ -14,7 +14,7 @@ The goal of this project is to develop a model capable of predicting the closing
   * 1️⃣ top 5 stock and bottom 5 stock by selecting a date;
   * 2️⃣ stock price change graph by entering the stock id;
   * 3️⃣ adding values to get prediction for the specific stock, date and second;
-  * 4️⃣uploading files for prediction（notice: the uploaed file has to be have a right format).
+  * 4️⃣uploading files for prediction（📒: the uploaed file has to be have a right format).
 * **Demo**: Visit url: https://ml7773projectdeploy.streamlit.app/ for the cloud demonstration of it. Or you can run the deploy.py file to check the demo. 
 
 # Checklist
