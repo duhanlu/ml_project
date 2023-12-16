@@ -6,7 +6,7 @@ The goal of this project is to **develop a model capable of predicting the closi
 
 # Guidance
 * **Data**: Three data files for our projects: *<ins>train.csv*</ins>, *<ins>test.csv*</ins>, *<ins>revealed_targets.csv*</ins>.
-  （📒 The train.csv is too large that you can see the file in this google dirve link: ）
+  （📒 The train.csv is too large that you can see the file in this google dirve link: https://drive.google.com/file/d/1JyCTNr8rMrCxhV0K6KCsW62foBr056tq/view?usp=drive_link）
 * **EDA**:  *<ins>eda.ipynb</ins>* detailedly analyze three .csv files we used for our project. There are also graphs and heatmap of data visualization.
 * **Metaflow and Comet**:
   * Find in *<ins>project_metaflow.py</ins>*. `python ml_project_metaflow.py run` to train the test model and predict in metaflow. From the console, you could see the MAE of the test data.
@@ -15,7 +15,7 @@ The goal of this project is to **develop a model capable of predicting the closi
   * 1️⃣ top 5 stock and bottom 5 stock by selecting a date;
   * 2️⃣ stock price change graph by entering the stock id;
   * 3️⃣ adding values to get prediction for the specific stock, date and second;
-  * 4️⃣ uploading files for prediction（📒 the uploaed file has to be in a right format).
+  * 4️⃣ uploading files for prediction（📒 the uploaed file has to be in a right format, you could use assertion_data.csv or assertion_data_1.csv for now).
 * **Demo**: Visit url: https://ml7773projectdeploy.streamlit.app/ for the cloud demonstration of it. Or you can run the deploy.py file to check the demo.
 * **Slides**：Find in *<ins>presentation_slides.pdf</ins>*.
 
