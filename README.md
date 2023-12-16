@@ -9,8 +9,11 @@ The goal of this project is to develop a model capable of predicting the closing
 * **EDA and visualization**:  *<ins>eda.ipynb</ins>* detailedly analyze three .csv files we used for our project. There are also graphs and heatmap of data visualization.
 * **Metaflow and Comet**: Find in *<ins>ml_project_metaflow.py</ins>*. `python ml_project_metaflow.py` run to train the test model and predict in metaflow. From the console, you could see the MAE of the test data. There is a step in this flow which will upload the results to commet. You can see the dashboard screenshot named 
 *<ins>commet_dashboard_screenshot.png</ins>*.
-* **Streamlit**: Find in *<ins>deploy.py</ins>*. Run `streamlit run deploy.py` to show the user interface. It has the following functions: 1️⃣ top 5 stock and bottom 5 stock by selecting a date; 2️⃣ stock price change graph by entering the stock id; 3️⃣ adding values to get prediction for the specific 
-stock, date and seconds. 4️⃣uploading files for prediction（notice: the uploaed file has to be have a right format).
+* **Streamlit**: Find in *<ins>deploy.py</ins>*. Run `streamlit run deploy.py` to show the user interface. It has the following functions:
+  * 1️⃣ top 5 stock and bottom 5 stock by selecting a date;
+  * 2️⃣ stock price change graph by entering the stock id;
+  * 3️⃣ adding values to get prediction for the specific stock, date and second;
+  * 4️⃣uploading files for prediction（notice: the uploaed file has to be have a right format).
 * **Demo**: Visit url: https://ml7773projectdeploy.streamlit.app/ for the cloud demonstration of it. Or you can run the deploy.py file to check the demo. 
 
 # Checklist
