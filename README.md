@@ -2,7 +2,7 @@
 # Description 
 Stock exchanges are fast-paced, high-stakes environments where every second counts. The intensity escalates as the trading day approaches its end, peaking in the critical final ten minutes. These moments, often characterised by heightened volatility and rapid price fluctuations, play a pivotal role in shaping the global economic narrative for the day. Each trading day on the Nasdaq Stock Exchange concludes with the Nasdaq Closing Cross auction. This process establishes the official closing prices for securities listed on the exchange. These closing prices serve as key indicators for investors, analysts and other market participants in evaluating the performance of individual securities and the market as a whole.
 
-The goal of this project is to develop a model capable of predicting the closing price movements for hundreds of Nasdaq listed stocks using data from the order book and the closing auction of the stock. Information from the auction can be used to adjust prices, assess supply and demand dynamics, and identify trading opportunities.
+The goal of this project is to **develop a model capable of predicting the closing price movements for hundreds of Nasdaq listed stocks using data from the order book and the closing auction of the stock**. Information from the auction can be used to adjust prices, assess supply and demand dynamics, and identify trading opportunities.
 
 # Guidance
 * **Data**: Three data files for our projects: *<ins>train.csv*</ins>, *<ins>test.csv*</ins>, *<ins>revealed_targets.csv*</ins>. （📒 The train.csv is too large that you can see the file in this google dirve link: ）
