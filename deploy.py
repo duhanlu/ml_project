@@ -7,7 +7,7 @@ from metaflow import get_metadata, metadata
 
 # ------------------------------get data  and model from metadata ----------------------#
 FLOW_NAME = 'OptiverFlow'
-metadata('..')
+metadata('')
 print(get_metadata())
 def get_latest_successful_run(flow_name: str):
     "Gets the latest successfull run."
@@ -15,7 +15,7 @@ def get_latest_successful_run(flow_name: str):
         if r.successful: 
             return r
 latest_run = get_latest_successful_run(FLOW_NAME)
-latest_model = latest_run.data.model_0
+latest_model = latest_run.data.model
 df = pd.read_csv('validation_data0.csv')
  
 # ------------------------------ function for input data ----------------------------#
@@ -254,9 +254,9 @@ with tab2:
 
    single_row_data, features = generate_features(single_row_df,features)
    single_row_data,features = add_new_feature(single_row_data,features)
-   single_row_np = single_row_data[selected_features].values
+   single_row_np = single_row_data[features].values
    prediction = latest_model.predict(single_row_np)
-   st.write(single_row_np)
+   st.write(single_row_data[selected_features])
    st.write("The prediction is: ", prediction)
 
    st.subheader('Upload your dataset to get a bunch of predictions at same time!', divider='rainbow')
@@ -266,11 +266,11 @@ with tab2:
         dataframe = pd.read_csv(uploaded_file)
         st.write(dataframe)
 
-        uploaded_df, features = generate_features(dataframe,features)
-        uploaded_df, features = add_new_feature(uploaded_df,features)
-        uploaded_np = uploaded_df[features].values
+        uploaded_df, features2 = generate_features(dataframe,features)
+        uploaded_df, features2 = add_new_feature(uploaded_df,features2)
+        uploaded_np = uploaded_df[selected_features].values
         predictions = latest_model.predict(uploaded_np)
-        st.write(uploaded_np)
+        st.write(uploaded_df[selected_features])
         st.write("The predictions are: ", predictions)
 
 
