@@ -5,7 +5,7 @@ Stock exchanges are fast-paced, high-stakes environments where every second coun
 The goal of this project is to develop a model capable of predicting the closing price movements for hundreds of Nasdaq listed stocks using data from the order book and the closing auction of the stock. Information from the auction can be used to adjust prices, assess supply and demand dynamics, and identify trading opportunities.
 
 # Guidance
-* **Data**: Three data files for our projects: train.csv, test.csv, revealed_targets.csv.
+* **Data**: Three data files for our projects: *<ins>train.csv*</ins>, *<ins>test.csv*</ins>, *<ins>revealed_targets.csv*</ins>. ⚠ The train.csv is too large that you can see the file in this google dirve link: 
 * **EDA**:  *<ins>eda.ipynb</ins>* detailedly analyze three .csv files we used for our project. There are also graphs and heatmap of data visualization.
 * **Metaflow and Comet**:
   * Find in *<ins>ml_project_metaflow.py</ins>*. `python ml_project_metaflow.py run` to train the test model and predict in metaflow. From the console, you could see the MAE of the test data.
